@@ -4,7 +4,7 @@
       <v-col class="mb-4">
         <v-card class="mx-auto">
           <v-card-subtitle class="text-left">
-            制限：整数10桁までを計算対象としています。<br>
+            制限：整数10桁までを計算対象としています。
           </v-card-subtitle>
           <v-form ref="form" v-model="valid" lazy-validation>
             <v-container fluid style="background-color: #E8F5E9">
@@ -36,15 +36,15 @@
                 <v-col cols-6>
                   <v-card class="mx-auto">
                     <v-card-title class="green--text">
-                    <div class="text-h5">
-                      計算結果
-                    </div>
-                  </v-card-title>
-                  <v-card-text class="text-center">
-                    <div class="text-h3">
-                      {{ result }}
-                    </div>
-                  </v-card-text>
+                      <div class="text-h5">
+                        計算結果
+                      </div>
+                    </v-card-title>
+                    <v-card-text class="text-center">
+                      <div class="text-h3">
+                        {{ result }}
+                      </div>
+                    </v-card-text>
                   </v-card>
                 </v-col>
               </v-row>
@@ -75,12 +75,12 @@
       onsubmit() {
         // 入力値の検証を実行
         if (this.$refs.form.validate()) {
-          this.culculate();
+          this.calculate();
         }
       },
       // ここから回分数の計算
-      culculate() {
-        var input_num = this.input
+      calculate() {
+        var input_num = parseInt(this.input, 10).toString(10) // 前0対応
         var max_int = Number.MAX_SAFE_INTEGER  // JSで安全に扱える整数のMAX
         for (;;) {
           try {
@@ -103,7 +103,8 @@
               }
             }
           } catch(error) {
-          console.log("エラー内容：" + error);
+            console.log("エラー内容：" + error);
+            break;
           }
         }
       },

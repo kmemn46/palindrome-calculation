@@ -1,4 +1,7 @@
 # palindrome-calculation
+## 回文数計算プログラム
+- ロジックについては以下をご覧ください
+[計算ロジック](src/components/Calculate.vue)
 
 ## Project setup
 ```
