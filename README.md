@@ -1,8 +1,7 @@
 # palindrome-calculation
 ## 回文数計算プログラム
 - ロジックについては以下をご覧ください
-[計算ロジック](src/components/Calculate.vue)
-
+[計算ロジック](src/components/Calculate.vue#L81)
 ## Project setup
 ```
 npm install

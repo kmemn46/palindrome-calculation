@@ -78,7 +78,7 @@
           this.calculate();
         }
       },
-      // ここから回分数の計算
+      // ここから回文数の計算
       calculate() {
         var input_num = parseInt(this.input, 10).toString(10) // 前0対応
         var max_int = Number.MAX_SAFE_INTEGER  // JSで安全に扱える整数のMAX
